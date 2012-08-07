@@ -9,8 +9,11 @@ var mode = process.env.NODE_ENV === 'production' ? 'production' : 'development';
 var project = piccolo();
 
 // setup environment setting
-project.configure('development', function () {
+project.configure(function () {
   project.set('debug', true);
+});
+
+project.configure('development', function () {
   project.set('cache', 'none');
 });
 
@@ -18,7 +21,7 @@ project.configure('production', function () {
   project.set('cache', (60*60*24));
 });
 
-project.use('development');
+project.use(mode);
 
 // build piccolo, ready will emit once done
 project.build();
