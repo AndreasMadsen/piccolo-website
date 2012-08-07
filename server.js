@@ -3,6 +3,8 @@
 var http = require('http');
 var piccolo = require('piccolo');
 
+var mode = process.env.NODE_ENV === 'production' ? 'production' : 'development';
+
 // create new project
 var project = piccolo();
 
@@ -38,7 +40,9 @@ server.on('request', function (req, res) {
 
 // when piccolo is ready, start listening on port 8000
 project.once('ready', function () {
-  server.listen(8000, '127.0.0.1', function () {
+  var port = mode === 'production' ? 80 : 8000;
+
+  server.listen(port, '127.0.0.1', function () {
     var addr = server.address();
 
     console.log('piccolo server is ready, listening on ' + addr.address + ':' + addr.port);
