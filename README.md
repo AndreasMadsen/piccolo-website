@@ -4,10 +4,10 @@ Getting started:
 
 ```shell
 // clone the sourcecode
-git clone git://github.com/AndreasMadsen/piccolo-site.git
+git clone git://github.com/AndreasMadsen/piccolo-website.git
 
 // install dependencies
-cd piccolo-site
+cd piccolo-website
 npm install
 
 // run server
