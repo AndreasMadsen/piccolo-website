@@ -48,6 +48,8 @@ project.once('ready', function () {
   server.listen(port, '127.0.0.1', function () {
     var addr = server.address();
 
-    console.log('piccolo server is ready, listening on ' + addr.address + ':' + addr.port);
+    console.log('piccolo server is ready');
+    console.log('listening on ' + addr.address + ':' + addr.port);
+    console.log('running in ' + mode);
   });
 });
