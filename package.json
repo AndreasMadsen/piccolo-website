@@ -2,7 +2,7 @@
   "name": "piccolo-website",
   "subdomain": "piccolo",
   "description": "website for piccolo",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "author": "Andreas Madsen <amwebdk@gmail.com>",
   "scripts": {
